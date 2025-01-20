@@ -1,11 +1,262 @@
 <nav>
-  <ul>
-    <li></li>
+  <ul class="nav-logo">
+    <li>
+      <img
+        ngSrc="main-logo.png"
+        alt="GPI Logo"
+        height="57"
+        width="132"
+        priority
+      />
+    </li>
   </ul>
 
-  <ul>
-    <li></li>
-    <li></li>
-    <li></li>
+  <ul class="nav-actions">
+    <li class="lang-li">
+      <div class="lang-li__inner" [ngClass]="{ 'eng': !isGeorgian() }">
+        <div class="language-div lang-ge" (click)="toEng()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="49.912"
+            height="41.994"
+            viewBox="0 0 49.912 41.994"
+          >
+            <defs>
+              <filter
+                id="Rectangle_2184"
+                x="0"
+                y="2"
+                width="49.912"
+                height="39.994"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset dy="2" input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#161616" flood-opacity="0.102" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+              <filter
+                id="Rectangle_2187"
+                x="0"
+                y="0"
+                width="49.912"
+                height="39.994"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur-2" />
+                <feFlood flood-color="#161616" flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur-2" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+            </defs>
+            <g
+              id="Group_5601"
+              data-name="Group 5601"
+              transform="translate(-1571.936 -23.383)"
+            >
+              <g
+                transform="matrix(1, 0, 0, 1, 1571.94, 23.38)"
+                filter="url(#Rectangle_2184)"
+              >
+                <rect
+                  id="Rectangle_2184-2"
+                  data-name="Rectangle 2184"
+                  width="31.912"
+                  height="21.994"
+                  rx="3"
+                  transform="translate(9 9)"
+                  fill="#fff"
+                />
+              </g>
+              <g
+                transform="matrix(1, 0, 0, 1, 1571.94, 23.38)"
+                filter="url(#Rectangle_2187)"
+              >
+                <rect
+                  id="Rectangle_2187-2"
+                  data-name="Rectangle 2187"
+                  width="31.912"
+                  height="21.994"
+                  rx="3"
+                  transform="translate(9 9)"
+                  fill="#fff"
+                />
+              </g>
+              <rect
+                id="Rectangle_2183"
+                data-name="Rectangle 2183"
+                width="31.912"
+                height="21.994"
+                rx="3"
+                transform="translate(1580.936 32.383)"
+                fill="#fff"
+              />
+              <path
+                id="Path_10242"
+                data-name="Path 10242"
+                d="M13.714,13.748H0V9.166H13.714V.313h4.571V9.166H32v4.583H18.286l.01,8.543H13.728Z"
+                transform="translate(1580.869 32.064)"
+                fill="#f93939"
+                fill-rule="evenodd"
+              />
+              <path
+                id="Path_10243"
+                data-name="Path 10243"
+                d="M20.734,15.747H19.212v1.527h1.521V18.8h1.521V17.275h1.521V15.747H22.255V14.22H20.734Zm0-12.22H19.212V5.055h1.521V6.582h1.521V5.055h1.521V3.527H22.255V2H20.734Zm-15.212,0H4V5.055H5.521V6.582H7.042V5.055H8.564V3.527H7.042V2H5.521Zm0,12.22H4v1.527H5.521V18.8H7.042V17.275H8.564V15.747H7.042V14.22H5.521Z"
+                transform="translate(1582.98 33.119)"
+                fill="#f93939"
+                fill-rule="evenodd"
+              />
+            </g>
+          </svg>
+          <span>GEO</span>
+        </div>
+
+        <div class="language-div lang-en" (click)="toGeo()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="40"
+            viewBox="0 0 50 40"
+          >
+            <defs>
+              <filter
+                id="Rectangle_2187"
+                x="0"
+                y="0"
+                width="50"
+                height="40"
+                filterUnits="userSpaceOnUse"
+              >
+                <feOffset input="SourceAlpha" />
+                <feGaussianBlur stdDeviation="3" result="blur" />
+                <feFlood flood-color="#161616" flood-opacity="0.161" />
+                <feComposite operator="in" in2="blur" />
+                <feComposite in="SourceGraphic" />
+              </filter>
+              <clipPath id="clip-path">
+                <rect
+                  id="Rectangle_2186"
+                  data-name="Rectangle 2186"
+                  width="32"
+                  height="22"
+                  rx="3"
+                  transform="translate(0.008 37.658)"
+                  fill="#fff"
+                />
+              </clipPath>
+            </defs>
+            <g
+              id="Group_5601"
+              data-name="Group 5601"
+              transform="translate(-1571.936 -23.383)"
+            >
+              <g
+                transform="matrix(1, 0, 0, 1, 1571.94, 23.38)"
+                filter="url(#Rectangle_2187)"
+              >
+                <rect
+                  id="Rectangle_2187-2"
+                  data-name="Rectangle 2187"
+                  width="32"
+                  height="22"
+                  rx="3"
+                  transform="translate(9 9)"
+                  fill="#fff"
+                />
+              </g>
+              <g
+                id="Mask_Group_5600"
+                data-name="Mask Group 5600"
+                transform="translate(1580.928 -5.275)"
+                clip-path="url(#clip-path)"
+              >
+                <rect
+                  id="Rectangle_2185"
+                  data-name="Rectangle 2185"
+                  width="32"
+                  height="22"
+                  rx="3"
+                  transform="translate(0.008 37.658)"
+                  fill="#1a47b8"
+                />
+                <path
+                  id="Path_10244"
+                  data-name="Path 10244"
+                  d="M2.551,37.662,0,38v3.618L28.553,59.709h3.42V56.091Z"
+                  transform="translate(0 -0.006)"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="Path_10245"
+                  data-name="Path 10245"
+                  d="M1.134,38,31.973,57.59v2.12H30.865L0,40.1V38Z"
+                  transform="translate(0 -0.006)"
+                  fill="#f93939"
+                />
+                <path
+                  id="Path_10246"
+                  data-name="Path 10246"
+                  d="M29.494,37.605,31.973,38l.093,3.6S12.2,53.671,3.045,59.709H0V56.091Z"
+                  transform="translate(0 -0.006)"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="Path_10247"
+                  data-name="Path 10247"
+                  d="M31.973,38H30.94L0,57.607v2.1H1.134L31.973,40.115Z"
+                  transform="translate(0 -0.006)"
+                  fill="#f93939"
+                />
+                <path
+                  id="Path_10248"
+                  data-name="Path 10248"
+                  d="M11.662,37.662h8.77V44.7H32.066v8.312H20.431v6.7h-8.77v-6.7H0V44.7H11.662Z"
+                  transform="translate(0 -0.006)"
+                  fill="#fff"
+                  fill-rule="evenodd"
+                />
+                <path
+                  id="Path_10249"
+                  data-name="Path 10249"
+                  d="M13.5,37.707h5.063V46.35h13.5v5.01h-13.5v8.35H13.5v-8.35H0V46.35H13.5Z"
+                  transform="translate(0 -0.006)"
+                  fill="#f93939"
+                  fill-rule="evenodd"
+                />
+              </g>
+            </g>
+          </svg>
+          <span>ENG</span>
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <p-button
+        icon="pi pi-bell"
+        [rounded]="true"
+        [text]="true"
+        [raised]="true"
+      ></p-button>
+    </li>
+
+    <li class="person-li">
+      <p-button
+        icon="pi pi-user"
+        [rounded]="true"
+        [text]="true"
+        [raised]="true"
+      ></p-button>
+
+      <span>მარიამ</span>
+
+      <i class="pi pi-sort-down-fill"></i>
+    </li>
   </ul>
 </nav>

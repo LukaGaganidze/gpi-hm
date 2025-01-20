@@ -1,0 +1,48 @@
+nav {
+  padding: 2rem 6.8rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #1616161a 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.lang-li {
+  position: relative;
+  height: 4.2rem;
+  width: 9.2rem;
+  overflow: hidden;
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .2s linear;
+
+    &.eng {
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.language-div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.person-li {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pi-sort-down-fill {
+  font-size: 1rem;
+}

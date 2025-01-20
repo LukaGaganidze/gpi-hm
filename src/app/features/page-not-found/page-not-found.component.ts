@@ -1,14 +1,15 @@
 import { Component, OnDestroy, OnInit, signal } from '@angular/core';
-import { LanguageService } from '../../services/language.service';
+import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../shared/services/language.service';
 import { Subject, takeUntil } from 'rxjs';
 
 @Component({
-  selector: 'app-nav-bar',
-  standalone: false,
-  templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss',
+  selector: 'app-page-not-found',
+  imports: [RouterLink],
+  templateUrl: './page-not-found.component.html',
+  styleUrl: './page-not-found.component.scss',
 })
-export class NavBarComponent implements OnDestroy, OnInit {
+export class PageNotFoundComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
   isGeorgian = signal<boolean>(true);
@@ -27,15 +28,6 @@ export class NavBarComponent implements OnDestroy, OnInit {
         this.isGeorgian.set(isGeorgian);
       });
   }
-
-  toGeo() {
-    this.langSer.georgianLang();
-  }
-
-  toEng() {
-    this.langSer.englishLang();
-  }
-
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();

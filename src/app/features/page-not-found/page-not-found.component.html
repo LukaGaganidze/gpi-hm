@@ -1,0 +1,11 @@
+@if (isGeorgian()) {
+  <div class="err-container">
+    <p>გვაპატიეთ, ასეთი გვერდი არ არსებობს.</p>
+    <a [routerLink]="['/book-consultation']">დაჯავშნეთ კონსულტაცია</a>
+  </div>
+} @else {
+  <div class="err-container">
+    <p>Sorry, this page does not exist.</p>
+    <a [routerLink]="['/book-consultation']">Book a Consultation</a>
+  </div>
+}
