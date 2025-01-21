@@ -1,0 +1,40 @@
+.book-consultation-container {
+  min-height: calc(100vh - 14rem);
+  position: relative;
+}
+
+.content-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: solid #1616161a 2px;
+    padding-top: 2.4rem;
+    padding-bottom: 1rem;
+
+    &__inner {
+      display: grid;
+      grid-template-columns: 5.7rem 5.7rem;
+      align-items: center;
+      column-gap: 23.6rem;
+    }
+  }
+}
+
+.btn-placeholder {
+  height: 2.5rem;
+  width: 5.67rem;
+}
+

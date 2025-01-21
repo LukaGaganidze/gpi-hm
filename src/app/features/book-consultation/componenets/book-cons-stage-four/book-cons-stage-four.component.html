@@ -1,0 +1,22 @@
+<div class="stage-4-container">
+  <!--  <p-floatlabel variant="on">-->
+  <!--    <input-->
+  <!--      pInputText-->
+  <!--      id="pol-number"-->
+  <!--      [(ngModel)]="polNumber"-->
+  <!--      autocomplete="off"-->
+  <!--    />-->
+  <!--    <label for="pol-number">მიუთითე პოლისის ნომერი</label>-->
+  <!--  </p-floatlabel>-->
+
+  <p-floatlabel variant="on">
+    <p-select
+      [options]="cities"
+      [(ngModel)]="value3"
+      optionLabel="name"
+      inputId="on_label"
+      id="on_label"
+    />
+    <label for="on_label">აირჩიეთ ქალაქი</label>
+  </p-floatlabel>
+</div>

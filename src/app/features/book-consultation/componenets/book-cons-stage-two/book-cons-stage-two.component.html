@@ -1,0 +1,78 @@
+<h2>ᲐᲘᲠᲩᲘᲔ ᲙᲝᲜᲡᲣᲚᲢᲐᲪᲘᲘᲡ ᲢᲘᲞᲘ</h2>
+
+<div class="stage-2-container">
+  <div class="radio-buttons-container" (change)="onSelectionChange($event)">
+    <div class="radio-item">
+      <input name="selectionType" id="me" type="radio" value="me" checked />
+      <label for="me">
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          >
+            <path
+              id="phone-in-talk-outline_1_"
+              data-name="phone-in-talk-outline (1)"
+              d="M21.889,16.889a12.088,12.088,0,0,1-4-.667h-.333a1.009,1.009,0,0,0-.778.333L14.333,19A17.3,17.3,0,0,1,7,11.667L9.444,9.222a.885.885,0,0,0,.222-1.111,15.8,15.8,0,0,1-.556-4A1.2,1.2,0,0,0,8,3H4.111A1.2,1.2,0,0,0,3,4.111,18.873,18.873,0,0,0,21.889,23,1.2,1.2,0,0,0,23,21.889V18a1.2,1.2,0,0,0-1.111-1.111M5.222,5.222H6.889a22.188,22.188,0,0,0,.556,2.889L6.111,9.444a17.842,17.842,0,0,1-.889-4.222M20.778,20.778a17.842,17.842,0,0,1-4.222-.889l1.333-1.333A12.079,12.079,0,0,0,20.778,19v1.778M16.333,13h2.222A5.556,5.556,0,0,0,13,7.444V9.667A3.333,3.333,0,0,1,16.333,13m4.444,0H23A9.98,9.98,0,0,0,13,3V5.222A7.779,7.779,0,0,1,20.778,13Z"
+              transform="translate(-3 -3)"
+              fill="#292562"
+            />
+          </svg>
+        </div>
+        <span class="option-label-text">სატელეფონო კონსულტაცია</span>
+      </label>
+    </div>
+
+    <div class="radio-item">
+      <input name="selectionType" id="others" type="radio" value="others" />
+      <label for="others">
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27.418"
+            height="27.418"
+            viewBox="0 0 27.418 27.418"
+          >
+            <path
+              id="pharmacy_1_"
+              data-name="pharmacy (1)"
+              d="M13.509,27.018a4.5,4.5,0,0,1-4.5-4.5v-4.5H4.5a4.5,4.5,0,0,1,0-9.006h4.5V4.5a4.5,4.5,0,1,1,9.006,0v4.5h4.5a4.5,4.5,0,0,1,0,9.006h-4.5v4.5A4.5,4.5,0,0,1,13.509,27.018ZM4.5,11.257a2.251,2.251,0,1,0,0,4.5h5.629a1.126,1.126,0,0,1,1.126,1.126v5.629a2.251,2.251,0,1,0,4.5,0V16.886a1.126,1.126,0,0,1,1.126-1.126h5.629a2.251,2.251,0,1,0,0-4.5H16.886a1.126,1.126,0,0,1-1.126-1.126V4.5a2.251,2.251,0,1,0-4.5,0v5.629a1.126,1.126,0,0,1-1.126,1.126Z"
+              transform="translate(0.2 0.2)"
+              fill="#292562"
+              stroke="#27235d"
+              stroke-width="0.4"
+            />
+          </svg>
+        </div>
+        <span class="option-label-text">ვიზიტი კლინიკაში</span>
+      </label>
+    </div>
+
+    <div class="radio-item">
+      <input name="selectionType" id="threes" type="radio" value="thres" />
+      <label for="threes">
+        <div class="svg-container">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21.403"
+            height="14.401"
+            viewBox="0 0 21.403 14.401"
+          >
+            <path
+              id="video-camera-alt_1_"
+              data-name="video-camera-alt (1)"
+              d="M20.043,6.221a1.724,1.724,0,0,0-1.818.165.883.883,0,0,0-.1.084L16.591,8.021A4.367,4.367,0,0,0,12.252,4H4.376A4.379,4.379,0,0,0,0,8.376v5.251A4.381,4.381,0,0,0,4.376,18h7.876a4.367,4.367,0,0,0,4.342-4.049l1.537,1.535a1.031,1.031,0,0,0,.094.081A1.737,1.737,0,0,0,21,14.179v-6.4a1.726,1.726,0,0,0-.96-1.553ZM12.252,16.252H4.376A2.629,2.629,0,0,1,1.75,13.626V8.376A2.629,2.629,0,0,1,4.376,5.75h7.876a2.629,2.629,0,0,1,2.625,2.625v5.251A2.629,2.629,0,0,1,12.252,16.252Zm4.376-4.74V10.471l2.625-2.65.022,6.334L16.627,11.51Z"
+              transform="translate(0.2 -3.801)"
+              fill="#292562"
+              stroke="#292562"
+              stroke-width="0.4"
+            />
+          </svg>
+        </div>
+        <span class="option-label-text">ვიდეო კონსულტაცია</span>
+      </label>
+    </div>
+  </div>
+</div>

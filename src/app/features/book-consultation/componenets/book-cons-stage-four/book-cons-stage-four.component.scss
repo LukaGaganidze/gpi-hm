@@ -1,0 +1,13 @@
+.stage-4-container {
+  margin-bottom: 2.4rem;
+}
+
+::ng-deep .stage-4-container .p-select {
+  width: 57rem;
+  height: 50px;
+}
+
+::ng-deep .stage-4-container .p-select-label {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,186 @@
+.stage-1-form {
+  width: 57rem;
+  margin-bottom: 2.4rem;
+}
+
+.type-radio-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.me-case-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+::ng-deep .stage-1-form .p-iconfield input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.6rem;
+}
+::ng-deep .p-iconfield .p-inputicon {
+  right: 15px !important;
+}
+
+.list-pick-option {
+  color: #9199b4;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  & p {
+    width: max-content;
+    white-space: nowrap;
+  }
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background-color: #9199b4;
+  }
+}
+
+.radio-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+
+.person-radio-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.others-case-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+::ng-deep .others-case-container .p-inputtext,
+::ng-deep .me-case-container .p-inputtext {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.6rem;
+}
+::ng-deep .others-case-container .datepicker .p-inputtext {
+  padding: 15px;
+  font-size: 1.6rem;
+  min-width: 570px;
+}
+
+// RADIO BUTTONS
+.radio-item [type="radio"] {
+  display: none;
+}
+.radio-item label {
+  display: block;
+  padding: 15px 55px;
+  border: 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  color: #292562;
+  width: 100%;
+}
+.radio-item label:after,
+.radio-item label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.radio-item label:after {
+  height: 17px;
+  width: 17px;
+  border: 2px solid #292562;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.radio-item label:before {
+  background: #ed1c7c;
+  height: 20px;
+  width: 20px;
+  left: 18px;
+  top: 50%;
+  transform: scale(1.05) translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.radio-item [type="radio"] ~ label {
+  border-color: #b1b7ca;
+}
+.radio-item [type="radio"]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05) translateY(-50%);
+  z-index: 11;
+}
+
+// RADIO BUTTONS FOR PERSON
+.radio-item-person {
+  display: flex;
+  align-items: center;
+}
+.radio-item-person [type="radio"] {
+  display: none;
+}
+.radio-item-person label {
+  display: block;
+  padding: 10px 55px;
+  border: 2px solid;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  color: #292562;
+  width: 100%;
+}
+.radio-item-person label:after,
+.radio-item-person label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.radio-item-person label:after {
+  height: 17px;
+  width: 17px;
+  border: 2px solid #292562;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.radio-item-person label:before {
+  background: #ed1c7c;
+  height: 20px;
+  width: 20px;
+  left: 18px;
+  top: 50%;
+  transform: scale(1.05) translateY(-50%);
+  opacity: 0;
+  visibility: hidden;
+}
+.radio-item-person [type="radio"] ~ label {
+  border-color: #b1b7ca;
+}
+.radio-item-person [type="radio"]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.05) translateY(-50%);
+  z-index: 11;
+}
+.person-label {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.5rem;
+
+  &__id {
+    color: #9199b4;
+  }
+}
