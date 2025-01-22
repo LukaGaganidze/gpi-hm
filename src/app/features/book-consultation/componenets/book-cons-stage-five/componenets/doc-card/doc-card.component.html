@@ -1,0 +1,51 @@
+@if (docInfo) {
+  <div class="doc-cord">
+    <div class="doc-info-container">
+      <div class="doc-info-container__user-img-placeholder">
+        <i class="pi pi-user"></i>
+      </div>
+
+      <div class="doc-info-container__info">
+        <div class="doc-info-box">
+          <span>{{ docInfo.name }}</span>
+          <span>&#x2022;</span>
+          <span>{{ docInfo.speciality }}</span>
+        </div>
+
+        <div class="doc-workplace-box">
+          <i class="pi pi-building"></i>
+          <div class="doc-workplace-box__details">
+            <span>{{ docInfo.clinicName }}</span>
+            <span>{{ docInfo.clinicAddress }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="available-time-slot-container">
+      @for (slot of docInfo.availableHours; let i = $index; track i) {
+        <div class="radio-item">
+          <input
+            name="time-slot"
+            [id]="slot.start + docInfo.name + docInfo.speciality"
+            type="radio"
+            [value]="{
+              time: slot.start + '-' + slot.end,
+              doc: docInfo.name,
+              speciality: docInfo.speciality,
+              clinicName:docInfo.clinicName,
+              clinicAddress:docInfo.clinicAddress
+            }"
+            [(ngModel)]="selectedSlot"
+            (change)="onSlotChange()"
+          />
+          <label [for]="slot.start + docInfo.name + docInfo.speciality">
+            <span>{{ slot.start }}</span>
+            <span>-</span>
+            <span>{{ slot.end }}</span>
+          </label>
+        </div>
+      }
+    </div>
+  </div>
+}

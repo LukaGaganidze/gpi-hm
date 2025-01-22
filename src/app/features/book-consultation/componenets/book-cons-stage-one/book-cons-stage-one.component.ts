@@ -1,8 +1,11 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { SharedModule } from '../../../../shared/shared.module';
-import { writeErrorToLogFile } from '@angular/cli/src/utilities/log-file';
 import { FloatLabel } from 'primeng/floatlabel';
-// import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  peopleDataPersonal,
+  peopleDataForOthers,
+  PersonData,
+} from './stahe-one-data';
 
 @Component({
   selector: 'app-book-cons-stage-one',
@@ -11,10 +14,14 @@ import { FloatLabel } from 'primeng/floatlabel';
   styleUrl: './book-cons-stage-one.component.scss',
 })
 export class BookConsStageOneComponent implements OnInit {
-  personSelection = signal<null | 'me' | 'others'>('others');
+  personSelection = signal<null | 'me' | 'others'>('me');
 
   chosenPerson = signal<null | string>(null);
   chosenPersonOther = signal<null | string>(null);
+
+  // dummy data
+  pListPersonal = signal<[] | PersonData[]>([]);
+  pListOthers = signal<[] | PersonData[]>([]);
 
   personID: string = '';
   polNumber: string = '';
@@ -22,7 +29,10 @@ export class BookConsStageOneComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.pListPersonal.set(peopleDataPersonal);
+    this.pListOthers.set(peopleDataForOthers);
+  }
 
   onSelectionChange(event: Event): void {
     const value = (event.target as HTMLInputElement).value;

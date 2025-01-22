@@ -1,0 +1,96 @@
+.reservations {
+  width: 57rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  & .reservation {
+    padding: 2rem;
+  }
+
+  & .reservation:not(:last-child) {
+    border-bottom: solid #ebedf5 2px;
+  }
+}
+
+.doc-container {
+  display: flex;
+  align-content: center;
+  gap: 1.6rem;
+  margin-bottom: 1.7rem;
+}
+
+.img-placeholder {
+  width: 5.6rem;
+  height: 5.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ed1c7c;
+  border-radius: 50%;
+
+  & i {
+    font-size: 2rem;
+    color: #fff;
+  }
+}
+
+.doc-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.7rem;
+}
+
+.clinic-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.7rem;
+}
+
+.visit-time-container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.visit-time-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-i-container {
+  height: 4.4rem;
+  width: 4.4rem;
+  background-color: #feeef5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  & i {
+    color: #ed1c7c;
+    font-size: 2rem;
+  }
+}
+
+.visit-info-inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ed1c7c;
+}
+
+.doc-cart-inner-headers {
+  text-align: left;
+  font: normal normal medium 13px/18px Noto Sans Georgian;
+  color: #9199b4;
+  opacity: 1;
+}
+
+.doc-info-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

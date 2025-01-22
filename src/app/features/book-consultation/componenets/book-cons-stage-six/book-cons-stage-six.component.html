@@ -1,1 +1,45 @@
-<p>book-cons-stage-six works!</p>
+<div class="stage-6-container">
+  <h2>ᲒᲐᲓᲐᲐᲛᲝᲬᲛᲔ ᲯᲐᲕᲨᲐᲜᲘ</h2>
+  <div class="reservations">
+    @for (res of reservationsSignal(); track res.clinicName) {
+      <div class="reservation">
+        <div class="doc-container">
+          <div class="img-placeholder">
+            <i class="pi pi-user"></i>
+          </div>
+
+          <div class="doc-info">
+            <span class="doc-cart-inner-headers">ექიმი</span>
+
+            <span class="doc-info-inner">
+              <span>{{ res.doc }}</span>
+              <span>&#x2022;</span>
+              <span>{{ res.speciality }}</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="clinic-info">
+          <span class="doc-cart-inner-headers">კლინიკა</span>
+          <span>{{ res.clinicName }}</span>
+          <span>{{ res.clinicAddress }}</span>
+        </div>
+
+        <div class="visit-time-container">
+          <div class="calendar-i-container">
+            <i class="pi pi-calendar-times"></i>
+          </div>
+
+          <div class="visit-time-inner">
+            <span class="doc-cart-inner-headers">ვიზიტის დრო</span>
+
+            <div class="visit-info-inner">
+              <span>{{ res.time }}</span>
+              <span>{{ res.geoDate }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

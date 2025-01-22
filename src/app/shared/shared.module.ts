@@ -14,6 +14,10 @@ import { InputIconModule } from 'primeng/inputicon';
 import { FormsModule } from '@angular/forms';
 import { DatePicker } from 'primeng/datepicker';
 import { FloatLabel } from 'primeng/floatlabel';
+import { CarouselModule } from 'primeng/carousel';
+import { ToastModule } from 'primeng/toast';
+import { Toast } from 'primeng/toast';
+
 
 // components
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
@@ -34,6 +38,9 @@ const modules = [
   FormsModule,
   DatePicker,
   FloatLabel,
+  CarouselModule,
+  ToastModule,
+  Toast
 ];
 const components = [NavBarComponent];
 

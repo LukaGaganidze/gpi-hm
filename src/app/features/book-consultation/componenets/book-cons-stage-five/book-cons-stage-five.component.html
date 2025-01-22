@@ -1,1 +1,57 @@
-<p>book-cons-stage-five works!</p>
+<div class="stage-5-container">
+  <h2>ᲐᲘᲠᲩᲘᲔ ᲡᲐᲡᲣᲠᲕᲔᲚᲘ ᲓᲠᲝ</h2>
+
+  <div class="carousel-container">
+    <div class="cur-week-container">
+      <i class="pi pi-calendar-plus"></i>
+      <span>დღეს - {{ formattedDate() }}</span>
+    </div>
+    <p-carousel
+      [value]="monthDays()"
+      [numVisible]="7"
+      [numScroll]="7"
+      [circular]="false"
+      [responsiveOptions]="responsiveOptions"
+    >
+      <ng-template let-product #item>
+        <div class="radio-item">
+          <input
+            name="daySelection"
+            [id]="product.date.toString()"
+            type="radio"
+            [value]="product"
+            (change)="onDateSelect(product)"
+          />
+          <label [for]="product.date.toString()" class="cal-date-container">
+            <span>{{ product.geoWeekDay }}</span>
+            <span>{{ product.geoDate }}</span>
+          </label>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+
+  <div class="dropdowns-container">
+    @for (data of stageFiveDropdownOptions(); track data.label) {
+      <p-floatlabel variant="on">
+        <p-select
+          [options]="data.options"
+          optionLabel="name"
+          optionValue="val"
+          [inputId]="data.label"
+          [id]="data.label"
+          [(ngModel)]="data.selectedValue"
+          (onChange)="handleChange($event)"
+        />
+        <label [for]="data.label">{{ data.label }}</label>
+      </p-floatlabel>
+    }
+  </div>
+
+  <p class="specialists-header">სპეციალისტები</p>
+  <div class="docs-rime-slots-con">
+    @for (doc of docTimeSlotsInfo(); track doc.name) {
+      <app-doc-card (slotChange)="handleSlotChange($event)"  [docInfo]="doc"></app-doc-card>
+    }
+  </div>
+</div>

@@ -52,3 +52,8 @@ a:visited {
   text-decoration: none;
 }
 
+@media (max-width: 450px) {
+  body {
+    padding: 0 1.5rem;
+  }
+}

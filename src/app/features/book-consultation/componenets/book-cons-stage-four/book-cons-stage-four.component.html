@@ -1,22 +1,57 @@
 <div class="stage-4-container">
-  <!--  <p-floatlabel variant="on">-->
-  <!--    <input-->
-  <!--      pInputText-->
-  <!--      id="pol-number"-->
-  <!--      [(ngModel)]="polNumber"-->
-  <!--      autocomplete="off"-->
-  <!--    />-->
-  <!--    <label for="pol-number">მიუთითე პოლისის ნომერი</label>-->
-  <!--  </p-floatlabel>-->
+  <div class="city-drop-down">
+    <p-floatlabel variant="on">
+      <p-select
+        [options]="cities()"
+        [(ngModel)]="city"
+        optionLabel="name"
+        inputId="on_label"
+        id="on_label"
+      />
+      <label for="on_label">აირჩიეთ ქალაქი</label>
+    </p-floatlabel>
+  </div>
 
-  <p-floatlabel variant="on">
-    <p-select
-      [options]="cities"
-      [(ngModel)]="value3"
-      optionLabel="name"
-      inputId="on_label"
-      id="on_label"
-    />
-    <label for="on_label">აირჩიეთ ქალაქი</label>
-  </p-floatlabel>
+  <p class="inner-header">აირჩიეთ სასურველი კლინიკა</p>
+
+  <div class="search-clinic-container">
+    <p-floatlabel variant="on">
+      <input
+        pInputText
+        id="pol-number"
+        [(ngModel)]="clinicName"
+        autocomplete="off"
+        (input)="filterClinics()"
+      />
+      <label for="pol-number">კლინიკის ძიება</label>
+    </p-floatlabel>
+  </div>
+
+  <div class="radio-buttons-container" (change)="onSelectionChange($event)">
+    @for (clinic of clinicsDataSignal(); track clinic.clinicName) {
+      <div class="radio-item">
+        <input
+          name="selectionType"
+          [id]="clinic.clinicName"
+          type="radio"
+          [value]="clinic.clinicName"
+        />
+        <label [for]="clinic.clinicName">
+          <div class="logo-img-container">
+            <img
+              [ngSrc]="clinic.img"
+              [alt]="clinic.clinicName + 'Logo'"
+              priority
+              height="50"
+              width="50"
+            />
+          </div>
+          <span class="option-label-text">
+            <span>{{ clinic.clinicName }}</span>
+            <span>{{ clinic.clinicAddress }}</span>
+          </span>
+        </label>
+      </div>
+    }
+  </div>
 </div>
