@@ -1,95 +1,96 @@
 <h2>ᲕᲘᲡᲘ ᲩᲐᲬᲔᲠᲐ ᲒᲡᲣᲠᲡ?</h2>
-<!--<div class="stage-1-form">-->
-<!--  <div-->
-<!--    class="type-radio-buttons-container"-->
-<!--    (change)="onSelectionChange($event)"-->
-<!--  >-->
-<!--    <div class="radio-item">-->
-<!--      <input name="selectionType" id="me" type="radio" value="me" checked />-->
-<!--      <label for="me">ჩემთვის</label>-->
-<!--    </div>-->
+<div class="stage-1-form">
+  <div
+    class="type-radio-buttons-container"
+    (change)="onSelectionChange($event)"
+  >
+    <div class="radio-item">
+      <input name="selectionType" id="me" type="radio" value="me" checked />
+      <label for="me">ჩემთვის</label>
+    </div>
 
-<!--    <div class="radio-item">-->
-<!--      <input name="selectionType" id="others" type="radio" value="others" />-->
-<!--      <label for="others">სხვისთვის</label>-->
-<!--    </div>-->
-<!--  </div>-->
+    <div class="radio-item">
+      <input name="selectionType" id="others" type="radio" value="others" />
+      <label for="others">სხვისთვის</label>
+    </div>
+  </div>
 
-<!--  @if (personSelection() === "me") {-->
-<!--    <div class="me-case-container">-->
-<!--      <p-floatlabel variant="on">-->
-<!--        <input-->
-<!--          pInputText-->
-<!--          id="pol-number"-->
-<!--          [(ngModel)]="polNumber"-->
-<!--          autocomplete="off"-->
-<!--        />-->
-<!--        <label for="pol-number">მიუთითე პოლისის ნომერი</label>-->
-<!--      </p-floatlabel>-->
+  @if (personSelection() === "me") {
+    <div class="me-case-container">
+      <p-floatlabel variant="on">
+        <input
+          pInputText
+          id="pol-number"
+          [(ngModel)]="polNumber"
+          autocomplete="off"
+        />
+        <label for="pol-number">მიუთითე პოლისის ნომერი</label>
+      </p-floatlabel>
 
-<!--      <div class="list-pick-option">-->
-<!--        <p>ან აირჩიე სიიდან</p>-->
-<!--        <div class="list-pick-option__line"></div>-->
-<!--      </div>-->
+      <div class="list-pick-option">
+        <p>ან აირჩიე სიიდან</p>
+        <div class="list-pick-option__line"></div>
+      </div>
 
-<!--      <div-->
-<!--        class="person-radio-buttons-container"-->
-<!--        (change)="onPersonSelectionChange($event)"-->
-<!--      >-->
-<!--        @for (per of pListPersonal(); track per.id) {-->
-<!--          <div class="radio-item-person">-->
-<!--            <input-->
-<!--              name="selectPerson"-->
-<!--              [id]="per.personId"-->
-<!--              type="radio"-->
-<!--              [value]="per.personId"-->
-<!--            />-->
-<!--            <label class="person-label" [for]="per.personId">-->
-<!--              <span>{{ per.name }}</span>-->
-<!--              <span class="person-label__id">{{ per.personId }}</span>-->
-<!--            </label>-->
-<!--          </div>-->
-<!--        }-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  } @else {-->
-<!--    <div class="others-case-container">-->
-<!--      <p>მიუთითე დაზღვეულის მონაცემები</p>-->
-<!--      <p-floatlabel variant="on">-->
-<!--        <input-->
-<!--          pInputText-->
-<!--          id="onPersonalID"-->
-<!--          [(ngModel)]="personID"-->
-<!--          autocomplete="off"-->
-<!--        />-->
-<!--        <label for="onPersonalID">პირადი ნომერი</label>-->
-<!--      </p-floatlabel>-->
-<!--      <div class="datepicker">-->
-<!--        <p-floatlabel variant="on">-->
-<!--          <p-datepicker id="birthDate" [(ngModel)]="birthDate"></p-datepicker>-->
-<!--          <label for="birthDate">დაბადების თარიღი</label>-->
-<!--        </p-floatlabel>-->
-<!--      </div>-->
-<!--      <p>აირჩიე ვისი ჩაწერა გსურს</p>-->
-<!--      <div-->
-<!--        class="person-radio-buttons-container"-->
-<!--        (change)="onPersonSelectionOtherChange($event)"-->
-<!--      >-->
-<!--        @for (per of pListOthers(); track per.id) {-->
-<!--          <div class="radio-item-person">-->
-<!--            <input-->
-<!--              name="selectPersonOthers"-->
-<!--              [id]="per.personId"-->
-<!--              type="radio"-->
-<!--              [value]="per.personId"-->
-<!--            />-->
-<!--            <label class="person-label" [for]="per.personId">-->
-<!--              <span>{{ per.name }}</span>-->
-<!--              <span class="person-label__id">{{ per.personId }}</span>-->
-<!--            </label>-->
-<!--          </div>-->
-<!--        }-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  }-->
-<!--</div>-->
+      <div
+        class="person-radio-buttons-container"
+        (change)="onPersonSelectionChange($event)"
+      >
+        @for (per of pListPersonal(); track per.id) {
+          <div class="radio-item-person">
+            <input
+              name="selectPerson"
+              [id]="per.personId"
+              type="radio"
+              [value]="per.personId"
+            />
+            <label class="person-label" [for]="per.personId">
+              <span>{{ per.name }}</span>
+              <span class="person-label__id">{{ per.personId }}</span>
+            </label>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="others-case-container">
+      <p>მიუთითე დაზღვეულის მონაცემები</p>
+      <p-floatlabel variant="on">
+        <input
+          pInputText
+          id="onPersonalID"
+          [(ngModel)]="personID"
+          autocomplete="off"
+        />
+        <label for="onPersonalID">პირადი ნომერი</label>
+      </p-floatlabel>
+
+      <div class="datepicker">
+        <p-floatlabel variant="on">
+          <p-datepicker id="birthDate" [(ngModel)]="birthDate"></p-datepicker>
+          <label for="birthDate">დაბადების თარიღი</label>
+        </p-floatlabel>
+      </div>
+      <p>აირჩიე ვისი ჩაწერა გსურს</p>
+      <div
+        class="person-radio-buttons-container"
+        (change)="onPersonSelectionOtherChange($event)"
+      >
+        @for (per of pListOthers(); track per.id) {
+          <div class="radio-item-person">
+            <input
+              name="selectPersonOthers"
+              [id]="per.personId"
+              type="radio"
+              [value]="per.personId"
+            />
+            <label class="person-label" [for]="per.personId">
+              <span>{{ per.name }}</span>
+              <span class="person-label__id">{{ per.personId }}</span>
+            </label>
+          </div>
+        }
+      </div>
+    </div>
+  }
+</div>

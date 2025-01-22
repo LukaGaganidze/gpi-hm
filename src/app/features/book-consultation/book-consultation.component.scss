@@ -38,8 +38,18 @@
   width: 5.67rem;
 }
 
-
-::ng-deep .next-btn-container .p-button  {
+::ng-deep .next-btn-container .p-button {
   background-color: #ed1c7c !important;
   border-color: #ed1c7c !important;
+}
+
+@media (max-width: 500px) {
+  .content-container {
+    &__nav {
+      &__inner {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+      }
+    }
+  }
 }
