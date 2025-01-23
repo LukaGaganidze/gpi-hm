@@ -103,3 +103,70 @@
 .radio-item [type="radio"]:checked ~ label {
   border-color: #ed1c7c;
 }
+
+@media (max-width: 935px) {
+  .available-time-slot-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 530px) {
+  .doc-info-container {
+    &__user-img-placeholder {
+      width: 4rem;
+      height: 4rem;
+
+      & i {
+        font-size: 2rem;
+        color: #fff;
+      }
+    }
+  }
+
+  .doc-cord {
+    margin: 0 auto;
+    width: 400px;
+    overflow: hidden;
+  }
+
+  .available-time-slot-container {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  .available-time-slot-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .doc-cord {
+    padding: 1.5rem;
+    width: 350px;
+  }
+  .doc-info-container {
+    &__user-img-placeholder {
+      width: 3rem;
+      height: 3rem;
+
+      & i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .doc-cord {
+    padding: 1rem;
+    width: 300px;
+  }
+}
+
+@media (max-width: 330px) {
+  .doc-cord {
+    width: 270px;
+  }
+}

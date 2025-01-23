@@ -1,5 +1,9 @@
+.stage-6-container {
+  margin-bottom: 2.4rem;
+}
+
 .reservations {
-  width: 57rem;
+  max-width: 57rem;
 
   display: flex;
   flex-direction: column;
@@ -94,3 +98,38 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  .reservations {
+    width: 100%;
+  }
+  ::ng-deep .others-case-container .datepicker .p-inputtext {
+    padding: 15px;
+    font-size: 1.6rem;
+    min-width: 450px !important;
+  }
+}
+
+@media (max-width: 530px) {
+  .doc-container {
+    & .img-placeholder {
+      width: 3rem;
+      height: 3rem;
+
+      & i {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .reservations {
+    gap: 2rem;
+    & .reservation {
+      padding: 1rem;
+    }
+  }
+}
+
+//380

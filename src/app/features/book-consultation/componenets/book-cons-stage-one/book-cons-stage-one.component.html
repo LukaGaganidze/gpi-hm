@@ -1,4 +1,5 @@
 <h2>ᲕᲘᲡᲘ ᲩᲐᲬᲔᲠᲐ ᲒᲡᲣᲠᲡ?</h2>
+
 <div class="stage-1-form">
   <div
     class="type-radio-buttons-container"
@@ -6,12 +7,12 @@
   >
     <div class="radio-item">
       <input name="selectionType" id="me" type="radio" value="me" checked />
-      <label for="me">ჩემთვის</label>
+      <label class="secondary-inner-header-g" for="me">ჩემთვის</label>
     </div>
 
     <div class="radio-item">
       <input name="selectionType" id="others" type="radio" value="others" />
-      <label for="others">სხვისთვის</label>
+      <label class="secondary-inner-header-g" for="others">სხვისთვის</label>
     </div>
   </div>
 
@@ -24,11 +25,11 @@
           [(ngModel)]="polNumber"
           autocomplete="off"
         />
-        <label for="pol-number">მიუთითე პოლისის ნომერი</label>
+        <label class="secondary-inner-header-g" for="pol-number">მიუთითე პოლისის ნომერი</label>
       </p-floatlabel>
 
       <div class="list-pick-option">
-        <p>ან აირჩიე სიიდან</p>
+        <p class="secondary-inner-header-g">ან აირჩიე სიიდან</p>
         <div class="list-pick-option__line"></div>
       </div>
 
@@ -45,8 +46,10 @@
               [value]="per.personId"
             />
             <label class="person-label" [for]="per.personId">
-              <span>{{ per.name }}</span>
-              <span class="person-label__id">{{ per.personId }}</span>
+              <span class="secondary-inner-header-g">{{ per.name }}</span>
+              <span class="person-label__id secondary-inner-header-g">{{
+                per.personId
+              }}</span>
             </label>
           </div>
         }
@@ -54,7 +57,7 @@
     </div>
   } @else {
     <div class="others-case-container">
-      <p>მიუთითე დაზღვეულის მონაცემები</p>
+      <p class="secondary-inner-header-g">მიუთითე დაზღვეულის მონაცემები</p>
       <p-floatlabel variant="on">
         <input
           pInputText
@@ -71,7 +74,7 @@
           <label for="birthDate">დაბადების თარიღი</label>
         </p-floatlabel>
       </div>
-      <p>აირჩიე ვისი ჩაწერა გსურს</p>
+      <p class="secondary-inner-header-g">აირჩიე ვისი ჩაწერა გსურს</p>
       <div
         class="person-radio-buttons-container"
         (change)="onPersonSelectionOtherChange($event)"
@@ -85,8 +88,10 @@
               [value]="per.personId"
             />
             <label class="person-label" [for]="per.personId">
-              <span>{{ per.name }}</span>
-              <span class="person-label__id">{{ per.personId }}</span>
+              <span class="secondary-inner-header-g">{{ per.name }}</span>
+              <span class="person-label__id secondary-inner-header-g">{{
+                per.personId
+              }}</span>
             </label>
           </div>
         }

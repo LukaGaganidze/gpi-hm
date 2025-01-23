@@ -51,7 +51,46 @@
   <p class="specialists-header">სპეციალისტები</p>
   <div class="docs-rime-slots-con">
     @for (doc of docTimeSlotsInfo(); track doc.name) {
-      <app-doc-card (slotChange)="handleSlotChange($event)"  [docInfo]="doc"></app-doc-card>
+      <app-doc-card
+        (slotChange)="handleSlotChange($event)"
+        (onDocPopup)="showDialog($event)"
+        [docInfo]="doc"
+      ></app-doc-card>
     }
   </div>
 </div>
+
+<p-dialog
+  header="ექიმის შესახებ"
+  [modal]="true"
+  [(visible)]="visible"
+  [style]="{ width: 'max-content' }"
+>
+  @if (docInfoSignal()) {
+    <div class="doc-popup-container">
+      <div class="doc-popup-container__mg-n-info">
+        <div class="doc-popup-img-placeholder-con">
+          <div class="doc-popup-img-placeholder">
+            <i class="pi pi-user"></i>
+          </div>
+        </div>
+
+        <div class="doc-popup-heading-info">
+          <span>{{ docInfoSignal()?.name }}</span>
+          <span>{{ docInfoSignal()?.speciality }}</span>
+        </div>
+      </div>
+
+      <p>ექიმის ინფორმაციის ფლეისჰოლდერი</p>
+
+      <div class="doc-popup-container__place-n-info">
+            <i class="pi pi-building" style="color: #9199b4"></i>
+
+        <div class="idoc-popup-container__place-n-info__text">
+          <span>{{ docInfoSignal()?.clinicName }}</span>
+          <span>{{ docInfoSignal()?.clinicAddress }}</span>
+        </div>
+      </div>
+    </div>
+  }
+</p-dialog>

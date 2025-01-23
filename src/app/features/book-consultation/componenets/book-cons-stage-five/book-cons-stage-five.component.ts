@@ -37,6 +37,8 @@ export class BookConsStageFiveComponent implements OnInit, OnDestroy {
     geoWeekDay: string;
   }>(null);
 
+  visible: boolean = false;
+
   // time slots for docs
   docTimeSlotsInfo = signal<[] | DoctorCard[]>([]);
 
@@ -52,10 +54,18 @@ export class BookConsStageFiveComponent implements OnInit, OnDestroy {
   // reservation info for stage 6
   currentResInfoState!: ReservationInfo;
 
+  // doc popup info
+  docInfoSignal = signal<DoctorCard | null>(null);
+
   constructor(
     private dataFormatSer: DateFormatService,
     private resSer: ReservationService,
   ) {}
+
+  showDialog(e: DoctorCard) {
+    this.docInfoSignal.set(e);
+    this.visible = true;
+  }
 
   ngOnInit() {
     this.formattedDate.set(
@@ -157,23 +167,28 @@ export class BookConsStageFiveComponent implements OnInit, OnDestroy {
     this.responsiveOptions = [
       {
         breakpoint: '1400px',
-        numVisible: 2,
-        numScroll: 1,
+        numVisible: 7,
+        numScroll: 7,
       },
       {
         breakpoint: '1199px',
-        numVisible: 3,
-        numScroll: 1,
+        numVisible: 7,
+        numScroll: 7,
       },
       {
         breakpoint: '767px',
-        numVisible: 2,
-        numScroll: 1,
+        numVisible: 5,
+        numScroll: 5,
       },
       {
         breakpoint: '575px',
-        numVisible: 1,
-        numScroll: 1,
+        numVisible: 5,
+        numScroll: 5,
+      },
+      {
+        breakpoint: '510px',
+        numVisible: 4,
+        numScroll: 4,
       },
     ];
   }

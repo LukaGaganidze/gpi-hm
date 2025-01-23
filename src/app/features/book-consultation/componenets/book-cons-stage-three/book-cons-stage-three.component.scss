@@ -70,3 +70,15 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .stage-2-container {
+    width: 100%;
+  }
+  .list {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+}

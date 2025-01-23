@@ -7,16 +7,21 @@
 
       <div class="doc-info-container__info">
         <div class="doc-info-box">
-          <span>{{ docInfo.name }}</span>
+          <span
+            (click)="onEmitDocPopup(docInfo)"
+            style="cursor: pointer"
+            class="inner-sub-header-g"
+            >{{ docInfo.name }}</span
+          >
           <span>&#x2022;</span>
-          <span>{{ docInfo.speciality }}</span>
+          <span class="inner-sub-header-g">{{ docInfo.speciality }}</span>
         </div>
 
         <div class="doc-workplace-box">
           <i class="pi pi-building"></i>
           <div class="doc-workplace-box__details">
-            <span>{{ docInfo.clinicName }}</span>
-            <span>{{ docInfo.clinicAddress }}</span>
+            <span class="inner-sub-header-g">{{ docInfo.clinicName }}</span>
+            <span class="inner-sub-header-g">{{ docInfo.clinicAddress }}</span>
           </div>
         </div>
       </div>
@@ -33,8 +38,8 @@
               time: slot.start + '-' + slot.end,
               doc: docInfo.name,
               speciality: docInfo.speciality,
-              clinicName:docInfo.clinicName,
-              clinicAddress:docInfo.clinicAddress
+              clinicName: docInfo.clinicName,
+              clinicAddress: docInfo.clinicAddress,
             }"
             [(ngModel)]="selectedSlot"
             (change)="onSlotChange()"

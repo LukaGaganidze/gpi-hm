@@ -95,3 +95,129 @@
   gap: 1.8rem;
   margin-bottom: 2.4rem;
 }
+
+.doc-popup-container {
+  &__mg-n-info,
+  &__place-n-info {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.idoc-popup-container__place-n-info__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-popup-img-placeholder-con {
+  width: 3rem;
+  height: 3rem;
+  display: block;
+}
+
+.doc-popup-img-placeholder {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ed1c7c;
+  border-radius: 50%;
+
+  & i {
+    font-size: 1rem;
+    color: #fff;
+  }
+}
+
+.doc-popup-heading-info {
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    font: normal normal medium 14px/19px Noto Sans Georgian;
+  }
+
+  & span:first-child {
+    color: #ed1c7c;
+  }
+  & span:last-child {
+    color: #9199b4;
+  }
+}
+
+@media (max-width: 1180px) {
+  .carousel-container {
+    grid-template-columns: 1fr;
+  }
+  .cur-week-container {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 700px;
+  }
+  .dropdowns-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 710px) {
+  .carousel-container {
+    display: block;
+  }
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 600px;
+  }
+  ::ng-deep .stage-5-container .p-carousel-content-container .p-button {
+    display: none;
+  }
+  ::ng-deep
+    .stage-5-container
+    .p-carousel-content-container
+    .p-carousel-content {
+    gap: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 615px) {
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 500px;
+  }
+  .dropdowns-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 530px) {
+  .stage-5-container {
+    padding: 0 1.5rem;
+  }
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 400px;
+  }
+  .dropdowns-container {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 410px) {
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 300px;
+  }
+  ::ng-deep .stage-5-container .p-carousel {
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+
+@media (max-width: 315px) {
+  ::ng-deep .stage-5-container .p-carousel-content-container {
+    width: 270px;
+  }
+}

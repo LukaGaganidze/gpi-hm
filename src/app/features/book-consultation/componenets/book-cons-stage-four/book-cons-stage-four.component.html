@@ -8,11 +8,11 @@
         inputId="on_label"
         id="on_label"
       />
-      <label for="on_label">აირჩიეთ ქალაქი</label>
+      <label class="secondary-inner-header-g" for="on_label">აირჩიეთ ქალაქი</label>
     </p-floatlabel>
   </div>
 
-  <p class="inner-header">აირჩიეთ სასურველი კლინიკა</p>
+  <p class="inner-header secondary-inner-header-g">აირჩიეთ სასურველი კლინიკა</p>
 
   <div class="search-clinic-container">
     <p-floatlabel variant="on">
@@ -23,7 +23,7 @@
         autocomplete="off"
         (input)="filterClinics()"
       />
-      <label for="pol-number">კლინიკის ძიება</label>
+      <label class="secondary-inner-header-g" for="pol-number">კლინიკის ძიება</label>
     </p-floatlabel>
   </div>
 
@@ -47,8 +47,8 @@
             />
           </div>
           <span class="option-label-text">
-            <span>{{ clinic.clinicName }}</span>
-            <span>{{ clinic.clinicAddress }}</span>
+            <span class="secondary-inner-header-g">{{ clinic.clinicName }}</span>
+            <span class="inner-sub-header-g">{{ clinic.clinicAddress }}</span>
           </span>
         </label>
       </div>

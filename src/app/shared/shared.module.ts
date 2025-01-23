@@ -17,6 +17,8 @@ import { FloatLabel } from 'primeng/floatlabel';
 import { CarouselModule } from 'primeng/carousel';
 import { ToastModule } from 'primeng/toast';
 import { Toast } from 'primeng/toast';
+import { DialogModule } from 'primeng/dialog';
+import { Dialog } from 'primeng/dialog';
 
 
 // components
@@ -40,7 +42,9 @@ const modules = [
   FloatLabel,
   CarouselModule,
   ToastModule,
-  Toast
+  Toast,
+  DialogModule,
+  Dialog
 ];
 const components = [NavBarComponent];
 

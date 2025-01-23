@@ -17,6 +17,7 @@ export class DocCardComponent {
     clinicName: string;
     clinicAddress: string;
   }>();
+  @Output('onDocPopup') onDocPopup = new EventEmitter<DoctorCard>();
 
   selectedSlot!: {
     time: string;
@@ -25,6 +26,10 @@ export class DocCardComponent {
     clinicName: string;
     clinicAddress: string;
   };
+
+  onEmitDocPopup(info: DoctorCard) {
+    this.onDocPopup.emit(info);
+  }
 
   onSlotChange(): void {
     this.slotChange.emit(this.selectedSlot);

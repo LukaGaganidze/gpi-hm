@@ -52,8 +52,30 @@ a:visited {
   text-decoration: none;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   body {
     padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .inner-sub-header-g {
+    font-size: 1rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 475px) {
+  .secondary-inner-header-g {
+    font-size: 1.2rem !important;
+  }
+
+}
+
+@media (max-width: 350px) {
+  h2 {
+    font-size: 1.8rem !important;
   }
 }
