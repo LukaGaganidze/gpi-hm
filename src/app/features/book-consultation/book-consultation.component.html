@@ -1,6 +1,6 @@
 <div class="book-consultation-container">
   <div class="card flex justify-center">
-    <p-stepper [value]="5" class="basis-[50rem]" [linear]="true">
+    <p-stepper [value]="1" class="basis-[50rem]" [linear]="true">
       <p-step-list>
         <p-step [value]="1"></p-step>
         <p-step [value]="2"></p-step>
@@ -139,7 +139,7 @@
                   <div class="next-btn-container">
                     <p-button
                       [disabled]="!canGoToStageSix()"
-                      label="გაგრძელება"
+                      label="დაჯავშნა"
                       icon="pi pi-arrow-right"
                       iconPos="right"
                       (click)="activateCallback(6); addReservation()"
@@ -163,11 +163,11 @@
                     label="უკან"
                     icon="pi pi-arrow-left"
                     severity="secondary"
-                    (click)="activateCallback(5)"
+                    (click)="activateCallback(5); reset()"
                   ></p-button>
                   <div class="next-btn-container">
                     <p-button
-                      label="თავიდან დაჯავშნა"
+                      label="თავიდან"
                       iconPos="right"
                       (click)="activateCallback(1); reset()"
                     ></p-button>

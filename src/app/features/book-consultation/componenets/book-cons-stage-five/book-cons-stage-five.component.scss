@@ -147,6 +147,16 @@
   }
 }
 
+.warn-message {
+  color: red;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
 @media (max-width: 1180px) {
   .carousel-container {
     grid-template-columns: 1fr;
@@ -202,7 +212,7 @@
   }
   .dropdowns-container {
     grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
+    margin: 2rem auto;
   }
 }
 

@@ -63,7 +63,7 @@ export class BookConsultationComponent implements OnInit, OnDestroy {
   addReservation() {
     if (this.resInfo && this.canGoToStageSix()) {
       this.resSer.updateReservations(this.resInfo);
-      this.showSuccess()
+      this.showSuccess();
     }
   }
 
